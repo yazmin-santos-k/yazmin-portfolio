@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yazmin Santos — Bilingual Marketing & Program Management Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#18181B;
+  --ink-mid:#3F3F46;
+  --ink-muted:#71717A;
+  --navy:#1E3A5F;
+  --navy-light:#2563A8;
+  --teal:#0F766E;
+  --teal-light:#14B8A6;
+  --sand:#F5F3EE;
+  --sand-dark:#EAE7E0;
+  --white:#FFFFFF;
+  --border:#E4E4E7;
+  --accent:#C2410C;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--sand);color:var(--ink);line-height:1.7;font-size:16px}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:58px}
+.nav-name{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--navy);letter-spacing:.01em}
+.nav-links{display:flex;gap:1.75rem;list-style:none}
+.nav-links a{text-decoration:none;font-size:.8rem;font-weight:500;color:var(--ink-muted);letter-spacing:.06em;text-transform:uppercase;transition:color .2s}
+.nav-links a:hover{color:var(--navy)}
+
+/* HERO */
+.hero{background:var(--navy);color:var(--white);padding:5rem 2rem 4.5rem;position:relative;overflow:hidden}
+.hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--teal-light),var(--navy-light),var(--teal-light))}
+.hero-inner{max-width:860px;margin:0 auto}
+.hero-eyebrow{font-size:.72rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--teal-light);margin-bottom:1.25rem}
+.hero-name{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,7vw,4.5rem);font-weight:400;line-height:1.05;margin-bottom:.4rem}
+.hero-name em{font-style:italic;color:rgba(255,255,255,.65)}
+.hero-title{font-size:1.05rem;font-weight:300;color:rgba(255,255,255,.75);margin-bottom:2rem;max-width:580px;line-height:1.6}
+.hero-pills{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:2.5rem}
+.hero-pill{font-size:.75rem;font-weight:500;padding:.3rem .9rem;border-radius:100px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);color:rgba(255,255,255,.88)}
+.hero-pill.hot{background:rgba(20,184,166,.18);border-color:rgba(20,184,166,.4);color:var(--teal-light)}
+.hero-cta{display:flex;gap:1rem;flex-wrap:wrap}
+.btn-white{background:var(--white);color:var(--navy);font-family:'Inter',sans-serif;font-size:.88rem;font-weight:600;padding:.7rem 1.6rem;border-radius:8px;text-decoration:none;border:none;cursor:pointer;transition:transform .15s,box-shadow .15s;letter-spacing:.01em;display:inline-block}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.25)}
+.btn-ghost{background:transparent;color:rgba(255,255,255,.85);font-family:'Inter',sans-serif;font-size:.88rem;font-weight:500;padding:.7rem 1.6rem;border-radius:8px;text-decoration:none;border:1.5px solid rgba(255,255,255,.35);transition:background .2s;display:inline-block}
+.btn-ghost:hover{background:rgba(255,255,255,.1)}
+
+/* STATS BAR */
+.stats-bar{background:var(--white);border-bottom:1px solid var(--border);padding:1.5rem 2rem}
+.stats-inner{max-width:860px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1rem}
+.stat{text-align:center;padding:.5rem}
+.stat-n{font-family:'Playfair Display',serif;font-size:2rem;color:var(--navy);line-height:1}
+.stat-l{font-size:.75rem;color:var(--ink-muted);margin-top:.25rem;font-weight:500}
+
+/* SECTIONS */
+section{padding:5rem 2rem}
+.container{max-width:860px;margin:0 auto}
+.eyebrow{font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin-bottom:.5rem}
+.section-h{font-family:'Playfair Display',serif;font-size:clamp(1.7rem,3.5vw,2.3rem);font-weight:400;color:var(--navy);margin-bottom:.75rem;line-height:1.2}
+.section-sub{font-size:.95rem;color:var(--ink-muted);max-width:600px;margin-bottom:3rem;line-height:1.8}
+
+/* ABOUT */
+.about-bg{background:var(--white)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
+.about-text p{color:var(--ink-mid);margin-bottom:.9rem;font-size:.95rem;line-height:1.8}
+.about-text p:last-child{margin-bottom:0}
+.lang-badges{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:1rem}
+.lang-badge{font-size:.8rem;font-weight:500;padding:.3rem .8rem;border-radius:6px;background:var(--sand);border:1px solid var(--sand-dark);color:var(--ink-mid)}
+.skills-list{display:flex;flex-direction:column;gap:.75rem}
+.skill-group{background:var(--sand);border-radius:10px;padding:1rem 1.1rem}
+.skill-group-label{font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);margin-bottom:.5rem}
+.skill-tags{display:flex;flex-wrap:wrap;gap:.35rem}
+.skill-tag{font-size:.77rem;color:var(--ink-mid);background:var(--white);border:1px solid var(--border);padding:.18rem .6rem;border-radius:5px}
+
+/* PROJECTS */
+.projects-bg{background:var(--sand)}
+
+/* NEW — HubSpot featured card */
+.featured-card{background:var(--navy);color:var(--white);border-radius:16px;padding:2.25rem;margin-bottom:1.5rem;position:relative;overflow:hidden}
+.featured-card::before{content:'';position:absolute;top:-40px;right:-40px;width:180px;height:180px;border-radius:50%;background:rgba(20,184,166,.12);pointer-events:none}
+.featured-tag{display:inline-block;font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:.25rem .8rem;border-radius:100px;background:rgba(20,184,166,.2);border:1px solid rgba(20,184,166,.4);color:var(--teal-light);margin-bottom:.85rem}
+.featured-title{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:400;margin-bottom:.6rem;line-height:1.2}
+.featured-desc{font-size:.9rem;color:rgba(255,255,255,.75);line-height:1.75;margin-bottom:1.25rem;max-width:600px}
+.featured-deliverables{display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:.6rem;margin-bottom:1.5rem}
+.deliverable{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:8px;padding:.75rem 1rem}
+.deliverable-icon{font-size:1.1rem;margin-bottom:.3rem}
+.deliverable-label{font-size:.8rem;font-weight:500;color:rgba(255,255,255,.9);line-height:1.4}
+.featured-links{display:flex;gap:.75rem;flex-wrap:wrap}
+.link-btn{font-size:.82rem;font-weight:500;padding:.5rem 1.1rem;border-radius:7px;text-decoration:none;transition:background .2s;display:inline-block}
+.link-btn-primary{background:var(--teal-light);color:var(--navy)}
+.link-btn-primary:hover{background:#0d9488}
+.link-btn-outline{background:transparent;color:rgba(255,255,255,.8);border:1px solid rgba(255,255,255,.3)}
+.link-btn-outline:hover{background:rgba(255,255,255,.1)}
+
+/* Regular project cards */
+.project-card{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:1.75rem;margin-bottom:1.25rem}
+.project-card-head{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;margin-bottom:.75rem;flex-wrap:wrap}
+.project-tag{font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:.25rem .75rem;border-radius:100px}
+.tag-ecomm{background:#E0F2FE;color:#0369A1}
+.tag-web{background:#EDE9FE;color:#6D28D9}
+.tag-design{background:#FEF3C7;color:#92400E}
+.tag-ai{background:#DCFCE7;color:#166534}
+.project-title{font-family:'Playfair Display',serif;font-size:1.25rem;color:var(--navy);margin-bottom:.5rem;font-weight:400}
+.project-desc{font-size:.88rem;color:var(--ink-muted);line-height:1.75;margin-bottom:.9rem}
+.project-highlights{list-style:none}
+.project-highlight{font-size:.85rem;color:var(--ink-mid);padding:.2rem 0 .2rem 1rem;position:relative;line-height:1.5}
+.project-highlight::before{content:'→';position:absolute;left:0;color:var(--teal);font-size:.8rem;top:.25rem}
+.project-link{display:inline-flex;align-items:center;gap:.35rem;margin-top:1rem;font-size:.82rem;font-weight:600;color:var(--navy);text-decoration:none;border:1.5px solid var(--navy);padding:.45rem 1rem;border-radius:7px;transition:background .2s,color .2s}
+.project-link:hover{background:var(--navy);color:var(--white)}
+
+/* EXPERIENCE */
+.exp-bg{background:var(--white)}
+.timeline{position:relative;padding-left:28px}
+.timeline::before{content:'';position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--border)}
+.tl-item{position:relative;margin-bottom:2.25rem}
+.tl-item:last-child{margin-bottom:0}
+.tl-dot{position:absolute;left:-24px;top:4px;width:16px;height:16px;border-radius:50%;background:var(--white);border:2px solid var(--navy);z-index:1}
+.tl-dates{font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);margin-bottom:.2rem}
+.tl-role{font-size:.98rem;font-weight:600;color:var(--ink);margin-bottom:.1rem}
+.tl-org{font-size:.85rem;color:var(--ink-muted);margin-bottom:.5rem}
+.tl-desc{font-size:.88rem;color:var(--ink-mid);line-height:1.7;margin-bottom:.5rem}
+.tl-result{display:inline-block;font-size:.75rem;font-weight:600;background:#E0F9F6;color:#0F766E;padding:.18rem .7rem;border-radius:100px}
+
+/* EDUCATION */
+.edu-bg{background:var(--sand)}
+.edu-grid{display:grid;gap:.75rem}
+.edu-card{display:grid;grid-template-columns:44px 1fr;gap:1rem;background:var(--white);border:1px solid var(--border);border-radius:12px;padding:1.25rem;align-items:center}
+.edu-icon{width:44px;height:44px;border-radius:10px;background:var(--navy);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0}
+.edu-degree{font-size:.92rem;font-weight:600;color:var(--ink);margin-bottom:.15rem}
+.edu-school{font-size:.82rem;color:var(--ink-muted)}
+.edu-pill{display:inline-block;margin-top:.3rem;font-size:.7rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;padding:.15rem .6rem;border-radius:100px}
+.pill-progress{background:#FEF3C7;color:#92400E}
+.pill-done{background:#DCFCE7;color:#166534}
+
+/* CONTACT */
+.contact-bg{background:var(--navy);color:var(--white)}
+.contact-bg .eyebrow{color:var(--teal-light)}
+.contact-bg .section-h{color:var(--white)}
+.contact-bg .section-sub{color:rgba(255,255,255,.7)}
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:.75rem;margin-top:1.75rem}
+.contact-card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:12px;padding:1.1rem 1.25rem;text-decoration:none;color:var(--white);transition:background .2s;display:block}
+.contact-card:hover{background:rgba(255,255,255,.15)}
+.contact-card-icon{font-size:1.2rem;margin-bottom:.4rem}
+.contact-card-label{font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;opacity:.6;margin-bottom:.2rem}
+.contact-card-value{font-size:.88rem;font-weight:500}
+
+footer{text-align:center;padding:1.75rem;background:#111;color:rgba(255,255,255,.35);font-size:.78rem}
+
+@media(max-width:640px){
+  .about-grid{grid-template-columns:1fr}
+  .hero{padding:3.5rem 1.25rem 3rem}
+  section{padding:3rem 1.25rem}
+  nav{padding:0 1rem}
+  .nav-links{gap:1rem}
+  .featured-deliverables{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <span class="nav-name">Yazmin Santos</span>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Portfolio · San Antonio, TX · Open to Work · Remote</div>
+    <h1 class="hero-name">Yazmin <em>Santos</em></h1>
+    <p class="hero-title">Bilingual Program Manager · AI-Powered Marketing · Instructional Designer · English / Spanish</p>
+    <div class="hero-pills">
+      <span class="hero-pill hot">HubSpot CRM</span>
+      <span class="hero-pill hot">AI Agents</span>
+      <span class="hero-pill hot">HubSpot Breeze AI</span>
+      <span class="hero-pill">Program Management</span>
+      <span class="hero-pill">Canva Advanced</span>
+      <span class="hero-pill">Curriculum Design</span>
+      <span class="hero-pill">E-Commerce</span>
+      <span class="hero-pill">Bilingual EN/ES</span>
+    </div>
+    <div class="hero-cta">
+      <a href="Yazmin_Santos_Resume_v4.pdf" class="btn-white" download>⬇ Download Resume</a>
+      <a href="#projects" class="btn-ghost">View My Work</a>
+    </div>
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat"><div class="stat-n">15+</div><div class="stat-l">Years program management</div></div>
+    <div class="stat"><div class="stat-n">84%</div><div class="stat-l">Bilingual outcome improvement</div></div>
+    <div class="stat"><div class="stat-n">57%</div><div class="stat-l">Test score improvement</div></div>
+    <div class="stat"><div class="stat-n">400+</div><div class="stat-l">Canva designs created</div></div>
+    <div class="stat"><div class="stat-n">2,200+</div><div class="stat-l">Learners taught</div></div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about-bg" id="about">
+  <div class="container">
+    <div class="eyebrow">Who I am</div>
+    <h2 class="section-h">Bilingual professional bridging<br>education, AI, and marketing</h2>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>I'm a bilingual professional (English/Spanish) with 15+ years leading education programs and curriculum design across government institutions and private organizations in Colombia — now building a career in digital marketing and AI-powered content strategy in the United States.</p>
+        <p>After relocating to San Antonio in 2023, I launched a print-on-demand e-commerce brand, completed the HubSpot AI Foundations Bootcamp (WGU × HubSpot, Cohort 1), built and deployed a live AI agent, and enrolled in an M.S. in Digital Marketing at WGU.</p>
+        <p>I bring rare combination of program management discipline, bilingual communication, advanced Canva skills, and hands-on AI tool experience. I'm authorized to work in the United States.</p>
+        <div class="lang-badges">
+          <span class="lang-badge">🇺🇸 English — Fluent (CEFR C1)</span>
+          <span class="lang-badge">🇨🇴 Spanish — Native</span>
+        </div>
+      </div>
+      <div class="skills-list">
+        <div class="skill-group">
+          <div class="skill-group-label">AI & Marketing Tech</div>
+          <div class="skill-tags">
+            <span class="skill-tag">HubSpot CRM</span>
+            <span class="skill-tag">HubSpot Breeze AI</span>
+            <span class="skill-tag">Agent.ai</span>
+            <span class="skill-tag">Claude</span>
+            <span class="skill-tag">ChatGPT</span>
+            <span class="skill-tag">Prompt Engineering</span>
+            <span class="skill-tag">Marketing Automation</span>
+            <span class="skill-tag">Email Marketing</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-label">Design & Content</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Canva Advanced</span>
+            <span class="skill-tag">Social Media Content</span>
+            <span class="skill-tag">Brand Design</span>
+            <span class="skill-tag">SEO Fundamentals</span>
+            <span class="skill-tag">Instagram</span>
+            <span class="skill-tag">Pinterest</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-label">Program Management</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Curriculum Design</span>
+            <span class="skill-tag">LMS Management</span>
+            <span class="skill-tag">Stakeholder Engagement</span>
+            <span class="skill-tag">KPI Tracking</span>
+            <span class="skill-tag">Team Leadership</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-label">E-Commerce & Tools</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Etsy</span>
+            <span class="skill-tag">Redbubble</span>
+            <span class="skill-tag">TeePublic</span>
+            <span class="skill-tag">Google Workspace</span>
+            <span class="skill-tag">Microsoft 365</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="projects-bg" id="projects">
+  <div class="container">
+    <div class="eyebrow">Featured work</div>
+    <h2 class="section-h">Projects & Portfolio</h2>
+    <p class="section-sub">Real projects built independently — demonstrating AI tools, marketing strategy, design, and web skills in practice.</p>
+
+    <!-- FEATURED: HubSpot -->
+    <div class="featured-card">
+      <div class="featured-tag">★ Featured · AI Marketing · CRM · Bootcamp</div>
+      <div class="featured-title">HubSpot AI Foundations Bootcamp<br>— Morehouse College Case Study</div>
+      <p class="featured-desc">Completed a 5-week intensive program (WGU × HubSpot, Cohort 1, 303 members) designing AI-powered marketing solutions for a higher education enrollment challenge. Built four real deliverables using HubSpot CRM, Breeze AI, Content Remix, and Agent.ai.</p>
+      <div class="featured-deliverables">
+        <div class="deliverable">
+          <div class="deliverable-icon">🗂</div>
+          <div class="deliverable-label">CRM Enrollment Pipeline<br><span style="opacity:.65;font-size:.75rem">HubSpot CRM · Lead Management · Audience Segmentation</span></div>
+        </div>
+        <div class="deliverable">
+          <div class="deliverable-icon">✉</div>
+          <div class="deliverable-label">Segmented Email Campaigns<br><span style="opacity:.65;font-size:.75rem">Students vs Parents · Personalization · Data-driven targeting</span></div>
+        </div>
+        <div class="deliverable">
+          <div class="deliverable-icon">🔄</div>
+          <div class="deliverable-label">AI Content Repurposing<br><span style="opacity:.65;font-size:.75rem">HubSpot Breeze AI · Content Remix · Multi-channel strategy</span></div>
+        </div>
+        <div class="deliverable">
+          <div class="deliverable-icon">🤖</div>
+          <div class="deliverable-label">AI Enrollment Support Agent<br><span style="opacity:.65;font-size:.75rem">Identifies blockers · Recommends next actions · CRM-integrated</span></div>
+        </div>
+      </div>
+      <div class="featured-links">
+        <a href="https://agent.ai/agent/nskz9ra99fevbwjv" target="_blank" class="link-btn link-btn-primary">🤖 See Live AI Agent</a>
+      </div>
+    </div>
+
+    <!-- AI Agent -->
+    <div class="project-card">
+      <div class="project-card-head">
+        <span class="project-tag tag-ai">AI Agent · Live Demo</span>
+        <a href="https://agent.ai/agent/nskz9ra99fevbwjv" target="_blank" class="project-link">Try it live ↗</a>
+      </div>
+      <div class="project-title">Movie Night Picker — AI Agent</div>
+      <p class="project-desc">Designed, deployed, and later rebuilt a live AI recommendation agent on Agent.ai integrating GPT-5 mini. After auditing the original version, redesigned the intake flow and output structure end-to-end, then implemented the upgrade directly in the no-code builder — solving real decision fatigue around "what should we watch tonight."</p>
+      <ul class="project-highlights">
+        <li class="project-highlight">Structured, one-question-at-a-time intake — mood, who's watching, time available, genres, and streaming platforms — instead of one open-ended prompt</li>
+        <li class="project-highlight">Returns three ranked picks per session, each with a short pitch, why it fits tonight, runtime, and a content note</li>
+        <li class="project-highlight">Side-by-side comparison table so users can weigh all three picks at a glance</li>
+        <li class="project-highlight">Deliberate design trade-off: skipped direct streaming deep-links (LLMs can't reliably track live catalog data) in favor of JustWatch search links — a call grounded in understanding AI's limitations</li>
+        <li class="project-highlight">Built-in feedback loop — if none of the picks land, the agent invites another round on the spot</li>
+      </ul>
+    </div>
+
+    <!-- Road Nesters -->
+    <div class="project-card">
+      <div class="project-card-head">
+        <span class="project-tag tag-ecomm">E-Commerce · Branding · Social Media</span>
+        <a href="https://canva.link/ns28ticsnlccebe" target="_blank" class="project-link">View Designs ↗</a>
+      </div>
+      <div class="project-title">Road Nesters — Print-on-Demand Brand</div>
+      <p class="project-desc">Founded and ran a multi-platform e-commerce brand for the RV, travel, and outdoor lifestyle niche during 2024–2025 — a hands-on, independently-run practice project applying digital marketing, SEO, branding, and social media strategy, built entirely by hand in Canva before adopting AI-assisted workflows.</p>
+      <ul class="project-highlights">
+        <li class="project-highlight">Designed 400+ product graphics (T-shirts, mugs, posters) in Canva with consistent brand identity</li>
+        <li class="project-highlight">Managed SEO-optimized listings across Etsy, Redbubble, and TeePublic with keyword research using AI tools</li>
+        <li class="project-highlight">Created branded Instagram content — posts, Reels, carousels, and RV lifestyle tips for organic audience growth</li>
+        <li class="project-highlight">Applied Claude, ChatGPT, and Gemini for product descriptions, content creation, and workflow automation</li>
+      </ul>
+    </div>
+
+    <!-- Bandera RV Resort -->
+    <div class="project-card">
+      <div class="project-card-head">
+        <span class="project-tag tag-web">Web Design · Copywriting</span>
+      </div>
+      <div class="project-title">Bandera RV Resort — Google Site</div>
+      <p class="project-desc">Designed and built a complete Google Site from scratch to market and manage bookings for a personal RV pad rental. Sole designer and content developer — handled layout, copy, and conversion strategy.</p>
+      <ul class="project-highlights">
+        <li class="project-highlight">Designed full site layout and user experience for a hospitality/rental context</li>
+        <li class="project-highlight">Wrote SEO-informed homepage copy and strategically placed calls-to-action</li>
+        <li class="project-highlight">Created a practical booking experience from scratch with no prior web design background</li>
+      </ul>
+    </div>
+
+
+    <!-- Leoben D&D Ecosystem -->
+    <div class="project-card" style="border-left:3px solid #7C3AED">
+      <div class="project-card-head">
+        <span class="project-tag" style="background:#EDE9FE;color:#5B21B6">Full Funnel · Digital Marketing · Lead Gen</span>
+        <a href="https://roadnesters.my.canva.site/play-dnd-with-leoben" target="_blank" class="project-link">View Website ↗</a>
+      </div>
+      <div class="project-title">Leoben's Adventure — D&D Business Marketing Ecosystem</div>
+      <p class="project-desc">Designed and built a complete digital marketing funnel for a real small business — a bilingual Dungeon Master offering beginner-friendly D&D campaigns. Built from scratch: brand identity, website, lead magnet PDF, landing page with email capture, Instagram strategy, and Linktree hub. The business has 158+ sessions hosted and a 5★ rating on StartPlaying.games.</p>
+      <ul class="project-highlights">
+        <li class="project-highlight"><strong>Brand identity</strong> — name, visual identity, tone of voice, and consistent aesthetic across all platforms (EN/ES/PT audiences)</li>
+        <li class="project-highlight"><strong>Canva website</strong> — full multi-page site with DM bio, campaign info, testimonials, and booking CTAs</li>
+        <li class="project-highlight"><strong>Lead magnet PDF</strong> — "Your First Quest" 8-chapter beginner guide designed to capture emails and convert visitors to booked players</li>
+        <li class="project-highlight"><strong>Landing page with live lead capture</strong> — built on Tiiny.site integrated with Formspree; actively capturing US-based leads (2 submissions in first 30 days), with social proof (5★, 158+ sessions, 20+ reviews) and instant guide delivery</li>
+        <li class="project-highlight"><strong>Instagram presence</strong> — @leobensadventure content strategy for D&D audience across three languages</li>
+        <li class="project-highlight"><strong>Linktree hub</strong> — centralized link hub connecting booking, website, guide, and social media</li>
+        <li class="project-highlight"><strong>HubSpot CRM + email welcome sequence</strong> — in progress, applying bootcamp skills to a live real-world business</li>
+      </ul>
+      <div style="display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1rem">
+        <a href="https://roadnesters.my.canva.site/play-dnd-with-leoben" target="_blank" class="project-link" style="margin-top:0">Website ↗</a>
+        <a href="https://leoben-guide.tiiny.site/" target="_blank" class="project-link" style="margin-top:0">Landing Page ↗</a>
+        <a href="https://www.instagram.com/leobensadventure" target="_blank" class="project-link" style="margin-top:0">Instagram ↗</a>
+        <a href="https://linktr.ee/leobensadventure" target="_blank" class="project-link" style="margin-top:0">Linktree ↗</a>
+      </div>
+    </div>
+    <!-- Canva Design -->
+    <div class="project-card">
+      <div class="project-card-head">
+        <span class="project-tag tag-design">Visual Design · Brand Identity</span>
+        <a href="https://canva.link/ns28ticsnlccebe" target="_blank" class="project-link">View Gallery ↗</a>
+      </div>
+      <div class="project-title">Canva Design Gallery</div>
+      <p class="project-desc">A collection of original designs created across branding, social media, e-commerce, and instructional contexts — demonstrating versatility across content types and visual styles.</p>
+      <ul class="project-highlights">
+        <li class="project-highlight">Instagram carousel templates — branded for engagement and visual consistency</li>
+        <li class="project-highlight">Posters and printables — styled for home décor, Etsy, and Redbubble markets</li>
+        <li class="project-highlight">Social media visuals — Reels covers, promotions, and campaign graphics</li>
+        <li class="project-highlight">Product mockups — mugs, T-shirts, and bundles for POD platforms</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="exp-bg" id="experience">
+  <div class="container">
+    <div class="eyebrow">Career journey</div>
+    <h2 class="section-h">Professional Experience</h2>
+    <p class="section-sub">15+ years delivering measurable outcomes across government, private sector, and entrepreneurial contexts.</p>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-dates">2024 – 2025</div>
+        <div class="tl-role">Digital Marketing Manager & E-Commerce Owner</div>
+        <div class="tl-org">Road Nesters · Remote, USA</div>
+        <div class="tl-desc">Founded a print-on-demand e-commerce brand as a hands-on practice project. Managed all design, SEO, social media, and AI-assisted content operations across Etsy, Redbubble, and TeePublic.</div>
+        <span class="tl-result">400+ designs · 3 marketplaces</span>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-dates">May–Jun 2026</div>
+        <div class="tl-role">AI Marketing Project Consultant</div>
+        <div class="tl-org">HubSpot AI Foundations Bootcamp (WGU × HubSpot) · Remote</div>
+        <div class="tl-desc">Built CRM pipelines, email campaigns, AI content workflows, and a live AI agent during a 5-week intensive with 303 cohort members.</div>
+        <span class="tl-result">Live AI agent deployed · Morehouse case study</span>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-dates">2022 – 2024</div>
+        <div class="tl-role">Project Lead — Bilingual Education Program</div>
+        <div class="tl-org">Educar Futuro (State of Cundinamarca Contract) · Colombia</div>
+        <div class="tl-desc">Led a government-contracted city-wide bilingual initiative across multiple schools, managing cross-functional teams and digital platforms.</div>
+        <span class="tl-result">57% test score improvement · 25% proficiency increase</span>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-dates">2021 – 2022</div>
+        <div class="tl-role">English Instructor & Instructional Designer</div>
+        <div class="tl-org">Kuepa Institute · Bogotá, Colombia</div>
+        <div class="tl-desc">Delivered digital English instruction to 2,200+ adult learners, developing custom eLearning modules and partnering with government on curriculum alignment.</div>
+        <span class="tl-result">63% competency improvement · 2,200+ learners</span>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-dates">2009 – 2021</div>
+        <div class="tl-role">Program Coordinator — Bilingual Education (Civilian)</div>
+        <div class="tl-org">Ministry of National Defense – Military School · Bogotá, Colombia</div>
+        <div class="tl-desc">Senior civilian educator managing bilingual programs for 500+ students over 11 years. Designed curriculum, led teacher development, managed compliance and reporting.</div>
+        <span class="tl-result">84% bilingual outcome improvement · 35% proficiency increase</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section class="edu-bg">
+  <div class="container">
+    <div class="eyebrow">Education & Certifications</div>
+    <h2 class="section-h">Academic Background</h2>
+    <div class="edu-grid">
+      <div class="edu-card">
+        <div class="edu-icon">🎓</div>
+        <div>
+          <div class="edu-degree">M.S., Digital Marketing</div>
+          <div class="edu-school">Western Governors University (WGU) · Remote, USA</div>
+          <span class="edu-pill pill-progress">In progress — 2027</span>
+        </div>
+      </div>
+      <div class="edu-card">
+        <div class="edu-icon">📜</div>
+        <div>
+          <div class="edu-degree">WGU × HubSpot AI Foundations Bootcamp — Cohort 1</div>
+          <div class="edu-school">HubSpot Academy · Remote</div>
+          <span class="edu-pill pill-done">Completed June 2026</span>
+        </div>
+      </div>
+      <div class="edu-card">
+        <div class="edu-icon">🎓</div>
+        <div>
+          <div class="edu-degree">M.Ed., Educational Technology & Digital Competency</div>
+          <div class="edu-school">International University of La Rioja (UNIR) · Spain</div>
+          <span class="edu-pill pill-done">Completed</span>
+        </div>
+      </div>
+      <div class="edu-card">
+        <div class="edu-icon">🎓</div>
+        <div>
+          <div class="edu-degree">B.A., Modern Languages (English–Spanish)</div>
+          <div class="edu-school">Francisco José de Caldas District University · Bogotá</div>
+          <span class="edu-pill pill-done">Completed</span>
+        </div>
+      </div>
+      <div class="edu-card">
+        <div class="edu-icon">📜</div>
+        <div>
+          <div class="edu-degree">Certificate in E-Learning and Gamification</div>
+          <div class="edu-school">International University of La Rioja · Spain</div>
+          <span class="edu-pill pill-done">Completed</span>
+        </div>
+      </div>
+      <div class="edu-card">
+        <div class="edu-icon">📜</div>
+        <div>
+          <div class="edu-degree">English Teaching Certificate (CISELT)</div>
+          <div class="edu-school">British Council · Bogotá, Colombia</div>
+          <span class="edu-pill pill-done">Completed</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-bg" id="contact">
+  <div class="container">
+    <div class="eyebrow">Let's connect</div>
+    <h2 class="section-h">Open to Opportunities</h2>
+    <p class="section-sub">Seeking roles in digital marketing, content coordination, bilingual program management, instructional design, or AI-assisted marketing — remote or San Antonio-based. Authorized to work in the US.</p>
+    <div class="contact-grid">
+      <a href="mailto:jrsantos78@gmail.com" class="contact-card">
+        <div class="contact-card-icon">✉</div>
+        <div class="contact-card-label">Email</div>
+        <div class="contact-card-value">jrsantos78@gmail.com</div>
+      </a>
+      <a href="tel:+12105001154" class="contact-card">
+        <div class="contact-card-icon">📱</div>
+        <div class="contact-card-label">Phone / WhatsApp</div>
+        <div class="contact-card-value">+1 (210) 500-1154</div>
+      </a>
+      <a href="https://www.linkedin.com/in/yazmin-rocio-santos-8975b1226/" target="_blank" class="contact-card">
+        <div class="contact-card-icon">🔗</div>
+        <div class="contact-card-label">LinkedIn</div>
+        <div class="contact-card-value">Yazmin Rocio Santos</div>
+      </a>
+      <a href="https://agent.ai/agent/nskz9ra99fevbwjv" target="_blank" class="contact-card">
+        <div class="contact-card-icon">🤖</div>
+        <div class="contact-card-label">Live AI Agent</div>
+        <div class="contact-card-value">Movie Night Picker</div>
+      </a>
+      <a href="Yazmin_Santos_Resume_v4.pdf" class="contact-card" download>
+        <div class="contact-card-icon">📄</div>
+        <div class="contact-card-label">Resume</div>
+        <div class="contact-card-value">Download PDF</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 Yazmin Santos · San Antonio, TX · Authorized to work in the United States</p>
+</footer>
+
+</body>
+</html>
